@@ -1,0 +1,100 @@
+{
+  "version": 1,
+  "skills": {
+    "analyze-and-plan": {
+      "source": "adobe/skills",
+      "sourceType": "github",
+      "computedHash": "70888b1ed505fe60cfc0f6628e355e5c6f8066fa969067caf70db1b2be2e71e9"
+    },
+    "authoring-analysis": {
+      "source": "adobe/skills",
+      "sourceType": "github",
+      "computedHash": "5b3d938ebe9ae85124fd107a803e0311ed396b6215a26412beefdc578eee3889"
+    },
+    "block-collection-and-party": {
+      "source": "adobe/skills",
+      "sourceType": "github",
+      "computedHash": "dee62d2eb96e6ff8d039da9db59cf3be3bbacaf052edff54f8b2cfb0a4622c33"
+    },
+    "block-inventory": {
+      "source": "adobe/skills",
+      "sourceType": "github",
+      "computedHash": "2483dbcce11f141b055d9f38743252605a6a9127b03b843e93fa8b836ea19774"
+    },
+    "building-blocks": {
+      "source": "adobe/skills",
+      "sourceType": "github",
+      "computedHash": "fc19e36496ab0ad035356369fee186d8f99746e9a38b3670b808628ab712506a"
+    },
+    "code-review": {
+      "source": "adobe/skills",
+      "sourceType": "github",
+      "computedHash": "b226f3229e7903678f9c51eab1506f928e55f3ded59852cc263308a674d78f32"
+    },
+    "content-driven-development": {
+      "source": "adobe/skills",
+      "sourceType": "github",
+      "computedHash": "2a6f1a8080621611a14292656e567043b25b2a34a01cc87df83dbdc804868f1a"
+    },
+    "content-modeling": {
+      "source": "adobe/skills",
+      "sourceType": "github",
+      "computedHash": "2cc1746ea1019d474bfac2e023c821a9375981b99fdad9a8b58ebf39b272c140"
+    },
+    "create-site": {
+      "source": "adobe/skills",
+      "sourceType": "github",
+      "computedHash": "fd4fb044ce3162d1959d31a2695afbaa06a7722b9d2982c8a4d202fd80857e93"
+    },
+    "docs-search": {
+      "source": "adobe/skills",
+      "sourceType": "github",
+      "computedHash": "6441a30713735232ed70fa84c34411b015574fea68aa649e732c43c644d61753"
+    },
+    "find-test-content": {
+      "source": "adobe/skills",
+      "sourceType": "github",
+      "computedHash": "b7f528c6cd4a3f0dcbbd1570b371049cdc5abd285b1f4547475a66dd9adb7b37"
+    },
+    "generate-import-html": {
+      "source": "adobe/skills",
+      "sourceType": "github",
+      "computedHash": "59603085810e2f093565dced14a972ef11ef027f6971f7210b5a74c2c4ca4602"
+    },
+    "identify-page-structure": {
+      "source": "adobe/skills",
+      "sourceType": "github",
+      "computedHash": "0e4c4147793348aad9e7191ce15e57e501c718fe4f1c4f8d3621e9e98b5a6e84"
+    },
+    "page-decomposition": {
+      "source": "adobe/skills",
+      "sourceType": "github",
+      "computedHash": "b4158dd29917d44ef779ce4c26e9e61279894265e9b5a2fc1ff39ef1dfc5ca1a"
+    },
+    "page-import": {
+      "source": "adobe/skills",
+      "sourceType": "github",
+      "computedHash": "2715ed0b49b993cfd0ab4f9c1f7971796f34c6b09a9beff3efb775b5bd34fbbb"
+    },
+    "preview-import": {
+      "source": "adobe/skills",
+      "sourceType": "github",
+      "computedHash": "deff1dc018f4457c7133629847ac5d02f302233366a465b0369e7e9c13c8ae54"
+    },
+    "scrape-webpage": {
+      "source": "adobe/skills",
+      "sourceType": "github",
+      "computedHash": "d79424e5783a211883ef2dab9aeaf77ef6c77a948795c490adc1ba4ce03faa53"
+    },
+    "testing-blocks": {
+      "source": "adobe/skills",
+      "sourceType": "github",
+      "computedHash": "daacf79b13833989dc2677d8fc8f46bf2fab7df128da096abd8a8580bc9dc521"
+    },
+    "ue-component-model": {
+      "source": "adobe/skills",
+      "sourceType": "github",
+      "computedHash": "132b8cac565af710bdb656d1fa27e058fc903323ab543dedcee5b7ac6242f467"
+    }
+  }
+}
