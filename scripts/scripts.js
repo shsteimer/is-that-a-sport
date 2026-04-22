@@ -14,21 +14,26 @@ import {
 
 /**
  * Builds hero block and prepends to main in a new section.
+ * If the first section starts with an h1, its contents (h1 + any following
+ * paragraphs until the next heading) are wrapped in a hero block.
  * @param {Element} main The container element
  */
 function buildHeroBlock(main) {
-  const h1 = main.querySelector('h1');
-  const picture = main.querySelector('picture');
-  // eslint-disable-next-line no-bitwise
-  if (h1 && picture && (h1.compareDocumentPosition(picture) & Node.DOCUMENT_POSITION_PRECEDING)) {
-    // Check if h1 or picture is already inside a hero block
-    if (h1.closest('.hero') || picture.closest('.hero')) {
-      return; // Don't create a duplicate hero block
-    }
-    const section = document.createElement('div');
-    section.append(buildBlock('hero', { elems: [picture, h1] }));
-    main.prepend(section);
+  const firstSection = main.firstElementChild;
+  if (!firstSection) return;
+  const h1 = firstSection.querySelector('h1');
+  if (!h1 || h1.closest('.hero')) return;
+
+  const elems = [];
+  let node = firstSection.firstElementChild;
+  while (node) {
+    const next = node.nextElementSibling;
+    if (/^H[2-6]$/.test(node.tagName)) break;
+    elems.push(node);
+    node = next;
   }
+  if (!elems.length) return;
+  firstSection.prepend(buildBlock('hero', { elems }));
 }
 
 /**
