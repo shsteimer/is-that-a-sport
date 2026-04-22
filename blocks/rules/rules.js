@@ -24,3 +24,5 @@ export default function decorate(block) {
 
   block.querySelectorAll('.rule').forEach((rule) => observer.observe(rule));
 }
+
+/* bust 2026-04-22T16:45 */

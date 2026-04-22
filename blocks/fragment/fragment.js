@@ -58,3 +58,5 @@ export default async function decorate(block) {
   const fragment = await loadFragment(path);
   if (fragment) block.replaceChildren(...fragment.childNodes);
 }
+
+/* bust 2026-04-22T16:45 */

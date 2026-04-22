@@ -216,3 +216,5 @@ export default async function decorate(block) {
 
   block.append(topRow, plotWrap, bottomRow, xAxis, buildLegend());
 }
+
+/* bust 2026-04-22T16:45 */
