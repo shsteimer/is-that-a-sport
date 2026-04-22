@@ -3,18 +3,38 @@ footer {
   font-size: var(--body-font-size-xs);
 }
 
-footer .footer > div {
+footer .footer .default-content-wrapper {
   margin: auto;
   max-width: 1200px;
   padding: 40px 24px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 footer .footer p {
   margin: 0;
 }
 
+footer .footer .icon-github {
+  display: inline-flex;
+  color: #555;
+  transition: color 150ms ease-out;
+}
+
+footer .footer .icon-github img {
+  width: 22px;
+  height: 22px;
+}
+
+footer .footer a:hover .icon-github {
+  color: #000;
+}
+
 @media (width >= 900px) {
-  footer .footer > div {
+  footer .footer .default-content-wrapper {
     padding: 40px 32px 24px;
   }
 }
