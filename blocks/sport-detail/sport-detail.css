@@ -1,0 +1,215 @@
+.sport-detail {
+  --sd-yes: #2e8540;
+  --sd-no: #c33;
+  --sd-debatable: #e0a819;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+
+.sport-detail .sd-sportness-yes { --sd-color: var(--sd-yes); }
+.sport-detail .sd-sportness-no { --sd-color: var(--sd-no); }
+.sport-detail .sd-sportness-debatable { --sd-color: var(--sd-debatable); }
+
+/* verdict badge */
+.sport-detail .sd-verdict {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 2.4em;
+  padding: 0.4em 1.2em;
+  background: var(--sd-color);
+  color: #fff;
+}
+
+.sport-detail .sd-verdict strong {
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-m);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.sport-detail .sd-quip {
+  font-style: italic;
+  color: #555;
+  font-size: var(--body-font-size-s);
+}
+
+/* score bars */
+.sport-detail .sd-scores {
+  display: grid;
+  gap: 0.9rem;
+  margin-top: 1.5rem;
+}
+
+.sport-detail .sd-bar-row {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr 2.5rem;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.sport-detail .sd-bar-label {
+  font-weight: 600;
+  font-size: var(--body-font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #444;
+}
+
+.sport-detail .sd-bar-track {
+  height: 0.9rem;
+  border-radius: 0.45rem;
+  background: #eee;
+  overflow: hidden;
+}
+
+.sport-detail .sd-bar-fill {
+  height: 100%;
+  width: var(--value, 0%);
+  background: var(--sd-color);
+  border-radius: 0.45rem;
+  transform-origin: left center;
+  animation: sd-bar-grow 600ms ease-out;
+}
+
+.sport-detail .sd-bar-value {
+  font-weight: 700;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes sd-bar-grow {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sport-detail .sd-bar-fill { animation: none; }
+}
+
+/* mini quadrant */
+.sport-detail .sd-quadrant-wrap {
+  position: relative;
+  padding-left: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.sport-detail .sd-quadrant {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  aspect-ratio: 1;
+  gap: 2px;
+  background: #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.sport-detail .sd-zone { opacity: 0.45; }
+.sport-detail .sd-zone-top-right { background: #dff5e3; }
+.sport-detail .sd-zone-top-left { background: #e8ecfb; }
+.sport-detail .sd-zone-bottom-right { background: #fff4d6; }
+.sport-detail .sd-zone-bottom-left { background: #fbe5e5; }
+
+.sport-detail .sd-dot {
+  position: absolute;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 50%;
+  background: var(--sd-color);
+  border: 3px solid #fff;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 25%);
+  transform: translate(-50%, 50%);
+  z-index: 1;
+}
+
+.sport-detail .sd-axis {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #666;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.sport-detail .sd-axis-x {
+  text-align: center;
+  margin-top: 0.25rem;
+}
+
+.sport-detail .sd-axis-y {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateX(-50%) rotate(-90deg);
+  transform-origin: center;
+  white-space: nowrap;
+}
+
+/* related sports */
+.sport-detail .sd-related {
+  grid-column: 1 / -1;
+  border-top: 1px solid #eee;
+  padding-top: 1.5rem;
+}
+
+.sport-detail .sd-related-heading {
+  font-size: var(--heading-font-size-s);
+  margin-top: 0;
+}
+
+.sport-detail .sd-related-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.sport-detail .sd-related-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 2px solid var(--sd-color);
+  border-radius: 2.4em;
+  padding: 0.3em 0.9em;
+  color: var(--text-color);
+  font-size: var(--body-font-size-xs);
+  font-weight: 600;
+}
+
+.sport-detail .sd-related-link::before {
+  content: "";
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background: var(--sd-color);
+}
+
+.sport-detail .sd-related-link:hover {
+  background: var(--sd-color);
+  color: #fff;
+  text-decoration: none;
+}
+
+.sport-detail .sd-related-link:hover::before {
+  background: #fff;
+}
+
+@media (width >= 900px) {
+  .sport-detail {
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .sport-detail .sd-panel-chart {
+    max-width: 360px;
+    justify-self: center;
+    width: 100%;
+  }
+}

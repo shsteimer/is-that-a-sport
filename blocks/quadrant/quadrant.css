@@ -172,4 +172,88 @@
   .quadrant .q-label-cell strong { font-size: 1.05rem; }
 }
 
-/* bust 2026-04-22T16:45 */
+/* controls: search + shuffle */
+.quadrant .q-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.quadrant .q-search {
+  position: relative;
+  flex: 1 1 16rem;
+  max-width: 22rem;
+}
+
+.quadrant .q-search-input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 2.4em;
+  padding: 0.5em 1.1em;
+  font-size: var(--body-font-size-s);
+}
+
+.quadrant .q-search-input:focus-visible {
+  outline: none;
+  border-color: var(--text-color);
+}
+
+.quadrant .q-search-results {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  margin: 0.4rem 0 0;
+  padding: 0;
+  list-style: none;
+  background: var(--background-color);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 15%);
+  overflow: hidden;
+}
+
+.quadrant .q-search-results:empty { display: none; }
+
+.quadrant .q-search-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5em 1.1em;
+  color: var(--text-color);
+}
+
+.quadrant .q-search-link::before {
+  content: "";
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: #999;
+}
+
+.quadrant .q-search-link.q-sportness-yes::before { background: #2e8540; }
+.quadrant .q-search-link.q-sportness-no::before { background: #c33; }
+.quadrant .q-search-link.q-sportness-debatable::before { background: #e0a819; }
+
+.quadrant .q-search-link:hover {
+  background: var(--light-color);
+  text-decoration: none;
+}
+
+.quadrant .q-reshuffle {
+  border: 2px solid var(--text-color);
+  border-radius: 2.4em;
+  padding: 0.5em 1.4em;
+  background: var(--text-color);
+  color: var(--background-color);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.quadrant .q-reshuffle:hover {
+  background: var(--dark-color);
+  border-color: var(--dark-color);
+}
