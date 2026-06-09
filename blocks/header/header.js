@@ -135,6 +135,13 @@ export default async function decorate(block) {
   if (brandLink) {
     brandLink.className = '';
     brandLink.closest('.button-container').className = '';
+  } else if (navBrand && !navBrand.querySelector('a')) {
+    // make the brand text a home link without changing how it looks
+    const brandContent = navBrand.querySelector('p') || navBrand;
+    const homeLink = document.createElement('a');
+    homeLink.href = '/';
+    while (brandContent.firstChild) homeLink.append(brandContent.firstChild);
+    brandContent.append(homeLink);
   }
 
   const navSections = nav.querySelector('.nav-sections');

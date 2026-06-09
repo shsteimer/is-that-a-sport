@@ -154,6 +154,13 @@ header nav .nav-brand img {
   height: auto;
 }
 
+/* brand home link inherits the brand styling exactly */
+header nav .nav-brand a:any-link,
+header nav .nav-brand a:hover {
+  color: currentcolor;
+  text-decoration: none;
+}
+
 /* sections */
 header nav .nav-sections {
   grid-area: sections;

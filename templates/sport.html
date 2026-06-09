@@ -15,37 +15,34 @@
   <meta name="twitter:title" content="Is {{Name}} a Sport?">
   <meta name="twitter:description" content="{{Description}}">
 
-  <!-- FAQ schema: exact-match question + verdict answer for AI Overviews / featured snippets. -->
+  <!-- One JSON-LD block (the pipeline keeps a single ld+json): FAQPage for
+       AI Overviews / featured snippets + BreadcrumbList for SERP hierarchy. -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [{
-      "@type": "Question",
-      "name": "Is {{{Name}}} a sport?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "{{{Description}}}"
-      }
-    }]
-  }
-  </script>
-
-  <!-- Breadcrumb schema: signals hierarchy in SERP. -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [{
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Is That a Sport?",
-      "item": "https://isthatasport.info/"
+    "@graph": [{
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Is {{{Name}}} a sport?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "{{{Description}}}"
+        }
+      }]
     }, {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "{{{Name}}}",
-      "item": "https://isthatasport.info{{{Slug}}}"
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Is That a Sport?",
+        "item": "https://isthatasport.info/"
+      }, {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "{{{Name}}}",
+        "item": "https://isthatasport.info{{{Slug}}}"
+      }]
     }]
   }
   </script>
