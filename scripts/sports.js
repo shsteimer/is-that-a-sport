@@ -31,7 +31,7 @@ function normalize(row) {
     quip: row.Quip || '',
     slug: row.Slug || '',
     description: row.Description || '',
-    featured: row.Featured === true || row.Featured === 'true',
+    featured: row.Featured === true || String(row.Featured).trim().toLowerCase() === 'true',
     sportness: classify(competition, exertion),
     quadrant: quadrantKey(competition, exertion),
   };
