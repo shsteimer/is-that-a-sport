@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- head.html (scripts.js, styles.css, CSP, viewport) is injected by the pipeline. -->
+  <!-- Page-specific SEO metadata only. -->
+  <title>Is {{Name}} a Sport?</title>
+  <meta name="description" content="{{Description}}">
+  <link rel="canonical" href="https://isthatasport.info{{Slug}}">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Is {{Name}} a Sport?">
+  <meta property="og:description" content="{{Description}}">
+  <meta property="og:url" content="https://isthatasport.info{{Slug}}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Is {{Name}} a Sport?">
+  <meta name="twitter:description" content="{{Description}}">
+
+  <!-- FAQ schema: exact-match question + verdict answer for AI Overviews / featured snippets. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "Is {{{Name}}} a sport?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{{Description}}}"
+      }
+    }]
+  }
+  </script>
+
+  <!-- Breadcrumb schema: signals hierarchy in SERP. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Is That a Sport?",
+      "item": "https://isthatasport.info/"
+    }, {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{{{Name}}}",
+      "item": "https://isthatasport.info{{{Slug}}}"
+    }]
+  }
+  </script>
+</head>
+<body>
+  <header></header>
+  <main>
+    <div>
+      <h1>Is {{Name}} a Sport?</h1>
+    </div>
+    <div>
+      <p>{{Description}}</p>
+      <div class="sport-detail">
+        <div>
+          <div>{{Slug}}</div>
+        </div>
+      </div>
+      <p><a href="/">&larr; Back to the full chart</a></p>
+    </div>
+  </main>
+  <footer></footer>
+</body>
+</html>
